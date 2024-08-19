@@ -12,7 +12,7 @@ public class ResponseUtil {
 
         map.put("msg", msg);
         map.put("status", status.value());
-        map.put("obj", obj);
+        map.put("data", obj);
 
         return new ResponseEntity<>(map, status);
     }

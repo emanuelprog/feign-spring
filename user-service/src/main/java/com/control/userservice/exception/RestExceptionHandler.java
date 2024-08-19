@@ -14,9 +14,8 @@ public class RestExceptionHandler {
     public ResponseEntity<Object> handleNotFoundException(NotFoundException ex) {
         HashMap<String, Object> map = new HashMap<>();
 
-        map.put("msg", ex.getMessage());
-        map.put("obj", null);
-        map.put("status", HttpStatus.NOT_FOUND.value());
+        map.put("code", HttpStatus.NOT_FOUND.value());
+        map.put("message", ex.getMessage());
 
         return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
     }
@@ -25,9 +24,8 @@ public class RestExceptionHandler {
     public ResponseEntity<Object> handleBadRequestException(BadRequestException ex) {
         HashMap<String, Object> map = new HashMap<>();
 
-        map.put("msg", ex.getMessage());
-        map.put("obj", null);
-        map.put("status", HttpStatus.NOT_FOUND.value());
+        map.put("code", HttpStatus.BAD_REQUEST.value());
+        map.put("message", ex.getMessage());
 
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
     }
