@@ -114,7 +114,7 @@ Este projeto foi desenvolvido para testar a integração de Feign e Kafka em um 
    cd user-service
    ./mvnw spring-boot:run
    
-2.1 **Em outro terminal**:
+   2.1 **Em outro terminal**:
     cd order-service
     ./mvnw spring-boot:run
 
