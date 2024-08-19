@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 public class OrderService {
 
     private final OrderRepository orderRepository;
+    
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     private final UserServiceClient userServiceClient;
